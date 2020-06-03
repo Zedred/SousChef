@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using CsvHelper;
-using MealLib;
 
-namespace MealLib
+namespace SousChef.DataAccess
 {
     public class MealCSVReader : IDisposable
     {
@@ -16,17 +15,17 @@ namespace MealLib
             throw new NotImplementedException();
         }
 
-        public void ReadDishesFile(string FilePath, ref SortedDictionary<string, Dish> DishDictionary)
+        public void ReadDishesFile(string FilePath, ref SortedDictionary<string, string> DishDictionary)
         {
             using(TextReader reader = new StreamReader(FilePath))
             {
                 using(CsvReader dishReader = new CsvReader(reader, CultureInfo.InvariantCulture))
                 {
-                    var dishes = dishReader.GetRecords<Dish>();
+                    var dishes = dishReader.GetRecords<string>();
                     
                     foreach(var dish in dishes)
                     {
-                        DishDictionary.Add(dish.Recipe, dish);
+                        DishDictionary.Add(dish, dish);
                     }
                 }
             }

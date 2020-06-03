@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 using Newtonsoft.Json;
-using MealPlanner.Models;
+using SousChef.Models;
 
 namespace SousChefTests
 {

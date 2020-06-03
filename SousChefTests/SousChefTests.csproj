@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MealPlanner\MealPlanner.csproj" />
+    <ProjectReference Include="..\MealPlanner\SousChef.csproj" />
   </ItemGroup>
 
 </Project>

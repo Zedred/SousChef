@@ -15,7 +15,7 @@ namespace MealsTester
                           .WithParsed<Options>(o =>
                           {
                               Console.WriteLine("Reading " + o.MealsFile);
-                              csvReader.ReadDishesFile(o.MealsFile);
+                              //csvReader.ReadDishesFile(o.MealsFile);
                           });
         }
 

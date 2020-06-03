@@ -1,30 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace MealPlanner.Models
+namespace SousChef.Models
 {
     public class Dish
     {
-        public enum ServingMeasurement { oz = 0, ml = 1 }
+        public enum ServingMeasurement { oz = 0, g = 1, ml = 1 }
         public Dish() { }
 
-        public Dish(string name, Serving servingSize, int calories, int carbohydrates, int protein, int fat, List<string> directions)
+        public Dish(int id, string name, string servingSize, int calories, int carbohydrates, int protein, int fat)
         {
+            DishId = id;
             Name = name;
             ServingSize = servingSize;
+            Calories = calories;
+            Carbohydrates = carbohydrates;
+            Protein = protein;
+            Fat = fat;
         }
 
-        [JsonRequired]
+        [Key]
+        [JsonProperty("dishId")]
+        public int DishId { get; set; }
+
         [JsonProperty("name")]
         public string Name { get; set; }
 
         [JsonProperty("serving")]
-        public Serving ServingSize { get; set; }
+        public string ServingSize { get; set; }
 
-        [JsonRequired]
         [JsonProperty("calories")]
         public int Calories { get; set; }
 
@@ -36,34 +44,6 @@ namespace MealPlanner.Models
 
         [JsonProperty("fat")]
         public int Fat { get; set; }
-
-        [JsonProperty("directions")]
-        public IList<Step> Directions { get; set; }
-
-        public class Serving
-        {
-            public Serving() { }
-            public Serving(int quantity, ServingMeasurement measurement)
-            {
-                Quantity = quantity;
-                Measurement = measurement;
-            }
-
-            [JsonProperty("quantity")]
-            public int Quantity { get; set; }
-
-            [JsonProperty("measurement")]
-            public ServingMeasurement Measurement { get; set; }
-        }
-
-        public class Step
-        {
-            [JsonProperty("number")]
-            public int Number { get; set; }
-
-            [JsonProperty("direction")]
-            public string Direction { get; set; }
-        }
 
     }
 }

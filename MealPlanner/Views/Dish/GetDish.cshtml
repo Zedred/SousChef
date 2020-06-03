@@ -1,0 +1,29 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Dish Results</title>
+</head>
+<body>
+    <h3>GetDish</h3>
+    @{
+        var dish = ViewData["Dish"] as SousChef.Models.Dish;
+    }
+
+    <div>
+        Dish: @dish.Name
+    </div>
+    <div>
+        Calories: @dish.Calories
+    </div>
+    <div>
+        Carbs(g): @dish.Carbohydrates
+    </div>
+    <div>
+        Protein(g): @dish.Protein
+    </div>
+    <div>
+        Fats(g): @dish.Fat
+    </div>
+</body>
+</html>
+

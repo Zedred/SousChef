@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SousChef", "MealPlanner\SousChef.csproj", "{2BE20846-CC49-4015-A121-FE55C3610698}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SousChefServer", "MealPlanner\SousChefServer.csproj", "{2BE20846-CC49-4015-A121-FE55C3610698}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MealEntry", "MealEntry\MealEntry.csproj", "{CCC42B71-F6CE-49F5-AA1B-3CA691E8A59B}"
 EndProject

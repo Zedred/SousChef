@@ -9,6 +9,8 @@
     <Compile Remove="Migrations\20200603023132_InitialMigration.Designer.cs" />
     <Compile Remove="Migrations\20200603024232_SeedUsers.cs" />
     <Compile Remove="Migrations\20200603024232_SeedUsers.Designer.cs" />
+    <Compile Remove="Migrations\20200603024952_SeedUsers.cs" />
+    <Compile Remove="Migrations\20200603024952_SeedUsers.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
